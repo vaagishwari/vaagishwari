@@ -1,0 +1,38 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+.header {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; /* दायें-बायें */
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: url('header-bg.jpg') no-repeat center/cover; /* आपने header-bg.jpg भी रखा है */
+  flex-wrap: wrap; /* बहुत छोटी Screen पर नीचे आ जाए */
+}
+
+.logo { 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  flex-shrink: 0;
+}
+
+.header h1 { 
+  flex: 1; 
+  text-align: center; 
+  color: white; 
+  font-size: clamp(18px, 4vw, 28px); /* Mobile में छोटा हो जाएगा */
+  text-shadow: 2px 2px 4px #000;
+}
+
+.tagline {
+  text-align: center;
+  background: #222;
+  color: #f0c040;
+  padding: 8px;
+  margin: 10px auto;
+  border-radius: 20px;
+  max-width: 90%;
+}
