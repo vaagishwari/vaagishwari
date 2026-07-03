@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>वागीश्वरी काव्य निर्झरिणी | प्रयागराज</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans Devanagari', sans-serif; line-height: 1.7; background: #FFF8E1; color: #3E2723; scroll-behavior: smooth; }
+        header { background: #5D4037; color: #FFF; padding: 1.5rem 0; border-bottom: 5px solid #FFB300; background-image: linear-gradient(rgba(93, 64, 55, 0.2), rgba(93, 64, 55, 0.2)), url('header-bg.jpg'); background-size: cover; background-position: center; text-align: center; }
+      .header-container { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+      .logo-left,.logo-right { height: 80px; width: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #FFB300; background: #FFF; padding: 2px; }
+      .header-text h1 { font-size: 2.5rem; margin-bottom: 0.8rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.9); }
+      .header-text p { font-size: 1.3rem; font-style: italic; margin: 0.5rem auto 0 auto; color: #FFD700; font-weight: 700; background: rgba(0, 0, 0, 0.65); padding: 0.5rem 1.5rem; border-radius: 25px; display: inline-block; border: 2px solid #FFB300; text-shadow: none; letter-spacing: 0.5px; }
+        nav { background: #4E342E; padding: 0.5rem 1rem; text-align: center; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a, nav .dropbtn { color: #FFF; text-decoration: none; margin: 0.5rem; padding: 1rem 0.8rem; font-weight: bold; font-size: 1.1rem; background: none; border: none; cursor: pointer; font-family: inherit; }
+        nav a:hover, nav .dropdown:hover .dropbtn { color: #FFB300; }
+      .dropdown { position: relative; display: inline-block; }
+      .dropdown-content { display: none; position: absolute; background-color: #FFF; min-width: 240px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 101; border-radius: 8px; border: 2px solid #FFB300; text-align: left; top: 100%; left: 0; }
+      .dropdown-content a { color: #3E2723; padding: 12px 16px; text-decoration: none; display: block; margin: 0; font-size: 1rem; font-weight: 600; border-bottom: 1px solid #f1f1f1; }
+      .dropdown-content a:last-child { border-bottom: none; }
+      .dropdown-content a:hover { background-color: #FFF8E1; color: #5D4037; }
+      .dropdown:hover .dropdown-content { display: block; }
+      .container { max-width: 1100px; margin: auto; padding: 2rem 1rem; }
+      .section { margin-bottom: 3rem; scroll-margin-top: 80px; }
+      .section h2 { font-size: 2rem; color: #5D4037; border-bottom: 3px solid #FFB300; display: inline-block; margin-bottom: 1.5rem; padding-bottom: 0.5rem; }
+      .btn { display: inline-block; background: #FFB300; color: #3E2723; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 1rem; cursor: pointer; border: none; font-family: inherit; font-size: 1rem; }
+      .btn:hover { background: #FFA000; }
+      .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+      .card { background: #FFF; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-left: 5px solid #5D4037; }
+      .card h3 { color: #5D4037; margin-bottom: 0.5rem; }
+      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+      .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        form { background: #FFF; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        form input, form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; font-size: 1rem; }
+        form button { background: #5D4037; color: #FFF; border: none; padding: 0.8rem 2rem; border-radius: 5px; font-size: 1.1rem; cursor: pointer; }
+        form button:hover { background: #4E342E; }
+      .about-content h3 { color: #5D4037; margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 1.4rem; }
+      .subscription-box { background: #FFF; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 2px solid #5D4037; text-align: center; }
+      .price-tag { background: #8B0000; color: white; display: inline-block; padding: 12px 25px; border-radius: 6px; margin: 15px 0; font-size: 1.3rem; }
+      .upi-details { margin: 20px 0; padding: 20px; border: 1px dashed #8B0000; background: #FFFAF0; border-radius: 8px; }
+      .upi-id { font-size: 1.2rem; font-weight: bold; color: #8B0000; margin: 10px 0; }
+      .steps-box { text-align: left; margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #FFB300; }
+      .cover-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #FFB300; }
+      .cover-gallery img { width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border: 2px solid #5D4037; transition: transform 0.3s; }
+      .cover-gallery img:hover { transform: scale(1.05); }
+      .cover-item { text-align: center; }
+      .cover-item p { margin-top: 0.5rem; font-size: 0.9rem; font-weight: bold; color: #5D4037; }
+      .print-subscription-box { margin-top: 2.5rem; padding: 2rem; background: #FFFDF7; border: 2px solid #FFB300; border-radius: 10px; text-align: center; }
+      .print-subscription-box h3 { color: #8B0000; font-size: 1.6rem; margin-bottom: 1rem; }
+      .price-list { list-style: none; padding: 0; margin: 1.5rem 0; text-align: left; display: inline-block; }
+      .price-list li { background: #FFF; margin: 0.6rem 0; padding: 0.8rem 1.2rem; border-left: 4px solid #5D4037; font-size: 1.05rem; border-radius: 5px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+      .bank-details { background: #f5f0e8; padding: 1.2rem; border-radius: 8px; margin: 1.5rem 0; text-align: left; border: 1px solid #d7c8b3; }
+      .bank-details b { color: #5D4037; }
+      .itihas-highlight { background: linear-gradient(135deg, #5D4037, #3E2723); color: #FFF; padding: 2.5rem; border-radius: 12px; margin-bottom: 2rem; border: 3px solid #FFB300; }
+      .itihas-highlight h2 { color: #FFB300; border-bottom: 2px solid #FFB300; text-align: center; }
+      .tab-menu { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0 1.5rem 0; flex-wrap: wrap; }
+      .tab-btn { background: transparent; color: #FFD700; border: 2px solid #FFB300; padding: 0.8rem 1.5rem; border-radius: 25px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: all 0.3s; }
+      .tab-btn:hover,.tab-btn.active { background: #FFB300; color: #3E2723; }
+      .tab-content { display: none; animation: fadeIn 0.5s; padding: 1rem 0; min-height: 100px; }
+      .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .current-poster { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-top: 1.5rem; }
+      .current-poster img { width: 100%; max-width: 350px; border-radius: 10px; border: 3px solid #FFB300; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+      .poster-details { flex: 1; min-width: 300px; }
+      .poster-details h3 { font-size: 1.5rem; color: #FFD700; margin-bottom: 1rem; }
+      .archive-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+      .archive-item img { width: 100%; border-radius: 5px; border: 2px solid #5D4037; transition: all 0.3s; }
+      .archive-item img:hover { border-color: #FFB300; transform: translateY(-5px); }
+      .archive-item p { font-size: 0.85rem; margin-top: 0.3rem; color: #FFF; text-align: center; }
+        footer { background: #3E2723; color: #FFF; text-align: center; padding: 2rem 0; margin-top: 2rem; }
+      .activity-list { background: #FFF; padding: 2rem; border-radius: 10px; border-left: 5px solid #8B0000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+      .activity-list h3 { color: #8B0000; text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem; border-bottom: 2px dashed #FFB300; padding-bottom: 0.5rem; }
+      .activity-list ul { list-style: none; padding-left: 0; }
+      .activity-list ul li { margin-bottom: 1rem; padding-left: 1.8rem; position: relative; line-height: 1.8; }
+      .activity-list ul li::before { content: "•"; color: #5D4037; font-size: 1.5rem; position: absolute; left: 0; top: -2px; }
+      .activity-list b { color: #5D4037; }
+      .sub-heading { font-size: 1.2rem; color: #5D4037; margin: 1.5rem 0 1rem 0; text-align: center; font-weight: bold; }
+      .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+      .team-card { background: #FFF; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #FFB300; }
+      .team-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid #5D4037; }
+      .team-card h3 { color: #5D4037; margin-bottom: 0.3rem; }
+      .team-card p { font-size: 0.95rem; color: #666; }
+        @media (max-width: 768px) {
+         .header-container { flex-direction: column; gap: 1rem; }
+         .logo-left,.logo-right { height: 70px; width: 70px; }
+         .header-text h1 { font-size: 1.8rem; }
+         .header-text p { font-size: 1.1rem; padding: 0.4rem 1rem; }
+            nav { flex-direction: column; }
+            nav a, nav .dropbtn { display: block; margin: 0.2rem 0; }
+         .dropdown-content { position: static; width: 100%; margin-top: 0.5rem; }
+         .cover-gallery { grid-template-columns: repeat(2, 1fr); }
+         .current-poster { flex-direction: column; text-align: center; }
+         .tab-menu { gap: 0.5rem; }
+         .tab-btn { padding: 0.6rem 1rem; font-size: 0.9rem; }
+         .poster-details { min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.jpeg" alt="वागीश्वरी काव्य निर्झरिणी लोगो" class="logo-left">
+            <div class="header-text">
+                <h1>वागीश्वरी काव्य निर्झरिणी</h1>
+                <p>अनहद की अनुगूँज, सृजन का आलोक</p>
+            </div>
+            <img src="msme-logo.jpeg" alt="MSME Udyam Registered Logo" class="logo-right">
+        </div>
+    </header>
+    <nav>
+        <a href="#home">मुख्य पृष्ठ</a>
+        <div class="dropdown">
+            <button class="dropbtn">संचेतना के स्वर ▼</button>
+            <div class="dropdown-content">
+                <a href="#sanchetna-epaper">ई-पत्रिका, सब्सक्रिप्शन मात्र 100/-</a>
+                <a href="#sanchetna-print">घर बैठे कैसे मँगाएँ</a>
+                <a href="#sanchetna-archive">पिछले अंक</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">हिन्दी साहित्य का इतिहास ▼</button>
+            <div class="dropdown-content">
+                <a href="#itihas-current">वर्तमान संगोष्ठी</a>
+                <a href="#itihas-archive">विगत संगोष्ठियाँ</a>
+                <a href="#itihas-media">मीडिया कवरेज</a> 
+            </div>
+        </div>
+        <a href="#karyakram">कार्यक्रम</a>
+        <a href="#rachna">रचनाएँ</a>
+        <a href="#gallery">गैलरी</a>
+        <a href="#sanchalak">संचालक-मंडल</a>
+        <a href="#sampark">संपर्क</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="section">
+            <h2>हमारे बारे में</h2>
+            <div class="about-content">
+                <h3>संस्था का गठन:</h3>
+                <p>19 अप्रैल 2023 को “वागीश्वरी काव्य निर्झरिणी” का पंजीकरण किया गया है, जिसका रजिस्ट्रेशन संख्या UDYAM-UP-03-0039662 है।</p>
+                <h3>संस्था का परिचय:</h3>
+                <p>वागीश्वरी काव्य निर्झरिणी प्रयागराज साहित्य के प्रति समर्पित एक ऐसी साहित्यिक संस्था है, जो पिछले तीन वर्षो से हिन्दी साहित्य व हिन्दी भाषा के संवर्धन के क्षेत्र में अभिनव सेवा का कार्य कर रही है। हमारा ध्येय-वाक्य है <b>"साहित्य साधना समर्पण"</b>।</p>
+            </div>
+            <a href="#sampark" class="btn">हमसे जुड़ें</a>
+        </section>
+        <section id="sanchetna" class="section">
+            <h2>संचेतना के स्वर - ई-पत्रिका</h2>
+            <div class="subscription-box">
+                <p style="font-size: 1.1rem; color: #5D4037;"><b>साहित्यिक, सामाजिक व सांस्कृतिक संचेतना की त्रैमासिक ई-पत्रिका</b></p>
+                <div id="sanchetna-epaper" class="price-tag" style="scroll-margin-top: 100px;"> ई-सब्सक्रिप्शन: मात्र ₹100/- वार्षिक </div>
+                <p><b>सब्सक्राइब करने पर आपको मिलेगा:</b></p>
+                <ul style="text-align: left; display: inline-block; margin: 15px 0; line-height: 1.8;">
+                    <li>नवीनतम अंक तुरंत ऑनलाइन पढ़ने की सुविधा</li>
+                    <li>पत्रिका के सभी पुराने अंकों का आर्काइव एक्सेस</li>
+                    <li>विशेषांक एवं साहित्यिक आयोजनों की सूचना सबसे पहले</li>
+                </ul>
+                <div class="upi-details">
+                    <h3 style="color: #5D4037; margin-top: 0;">भुगतान कैसे करें</h3>
+                    <img src="sanchetna-qr.png" alt="UPI QR Code" width="200" style="border:1px solid #ddd; padding:8px; background: white; margin: 15px 0; max-width:100%;">
+                    <div class="upi-id">UPI ID: 9452252582@postbank</div>
+                    <div><b>नाम:</b> ARJUN SHAW | <b>बैंक:</b> India Post Payments Bank</div>
+                    <div class="steps-box">
+                        <b>स्टेप 1:</b> ऊपर दिए QR को स्कैन करें या UPI ID पर ₹100 भेजें<br>
+                        <b>स्टेप 2:</b> पेमेंट का स्क्रीनशॉट WhatsApp करें: <b>9452252582</b><br>
+                        <b>स्टेप 3:</b> 24 घंटे के अंदर आपको ई-मैगज़ीन का रीडिंग लिंक मिल जाएगा
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 15px;"> *यह सहयोग राशि पत्रिका के संपादन एवं प्रकाशन हेतु उपयोग की जाएगी </p>
+                <div id="sanchetna-print" class="print-subscription-box" style="scroll-margin-top: 100px;">
+                    <h3>घर बैठे मँगाएँ "संचेतना के स्वर"</h3>
+                    <p>साहित्यिक, सामाजिक और सांस्कृतिक संचेतना की त्रैमासिक पत्रिका "संचेतना के स्वर" को घर बैठे मँगाने के लिए सहयोग राशि निम्नानुसार है।</p>
+                    <ul class="price-list">
+                        <li><b>पत्रिका की सिर्फ एक प्रति / एक अंक</b> (डाक खर्च सहित) - रु. 170</li>
+                        <li><b>वार्षिक सदस्यता सहयोग राशि</b> (डाक खर्च सहित) - रु. 650</li>
+                        <li><b>द्विवार्षिक सदस्यता सहयोग राशि</b> (डाक खर्च सहित) - रु. 1250</li>
+                        <li><b>त्रिवार्षिक सदस्यता सहयोग राशि</b> (डाक खर्च सहित) - रु. 1800</li>
+                        <li><b>आजीवन सदस्यता सहयोग राशि</b> (डाक खर्च सहित) - रु. 10,000</li>
+                        <li><b>पीडीएफ सदस्यता सहयोग राशि वार्षिक</b> - रु. 300 <small>(पीडीएफ सदस्यता के लिए मोबाइल नंबर 9452252582 पर व्हाट्सएप करें)</small></li>
+                    </ul>
+                    <div class="bank-details">
+                        <p><b>सहयोग राशि निम्न बैंक खाते में चेक / RTGS के माध्यम से भुगतान करें:</b></p>
+                        <p> <b>ARJUN SHAW</b><br> Account No. - 10021419944<br> IFSC Code - SBIN0004249<br> Bank - State Bank of India<br> Branch - Civil Lines, PB Branch, Allahabad. </p>
+                    </div>
+                    <p><b>या, इस QR Code से या UPI ID 9452252582@postbank के माध्यम से सहयोग राशि का भुगतान करें।</b></p>
+                    <img src="sanchetna-qr.png" alt="UPI QR Code Print Subscription" width="200" style="border:1px solid #ddd; padding:8px; background: white; margin: 15px 0; max-width:100%;">
+                    <div class="steps-box" style="text-align: left;"> <b>भुगतान के बाद</b> SMS या व्हाट्सएप कर दें <b>9452252582</b> पर तथा अपना पूरा नाम, पूरा पता, पिनकोड, मोबाइल नंबर तुरंत भेज दें। </div>
+                    <div style="margin-top: 1.5rem; text-align: left; background: #FFF; padding: 1rem; border-radius: 5px;">
+                        <p><b>संचेतना के स्वर का पत्र व्यवहार का पता</b></p>
+                        <p> वागीश्वरी काव्य निर्झरिणी<br> डॉ अर्जुन गुप्ता 'गुंजन'<br> एच-1 विनायक सुख विला,<br> लूकरगंज, प्रयागराज- 211001<br> (उत्तर प्रदेश) </p>
+                    </div>
+                </div>
+                <div id="sanchetna-archive" style="scroll-margin-top: 100px;">
+                    <h3 class="sub-heading">पिछले अंक</h3>
+                    <div class="cover-gallery">
+                        <div class="cover-item"><img src="Sanchetna-01.jpg" alt="अंक 1"><p>अंक 01</p></div>
+                        <div class="cover-item"><img src="Sanchetna-02.jpg" alt="अंक 2"><p>अंक 02</p></div>
+                        <div class="cover-item"><img src="Sanchetna-03.jpg" alt="अंक 3"><p>अंक 03</p></div>
+                        <div class="cover-item"><img src="Sanchetna-04.jpg" alt="अंक 4"><p>अंक 04</p></div>
+                        <div class="cover-item"><img src="Sanchetna-05.jpg" alt="अंक 5"><p>अंक 05</p></div>
+                        <div class="cover-item"><img src="Sanchetna-06.jpg" alt="अंक 6"><p>अंक 06</p></div>
+                        <div class="cover-item"><img src="Sanchetna-07.jpg" alt="अंक 7"><p>अंक 07</p></div>
+                        <div class="cover-item"><img src="Sanchetna-08.jpg" alt="अंक 8"><p>अंक 08</p></div>
+                        <div class="cover-item"><img src="Sanchetna-09.jpg" alt="अंक 9"><p>अंक 09</p></div>
+                        <div class="cover-item"><img src="Sanchetna-10.jpg" alt="अंक 10"><p>अंक 10</p></div>
+                        <div class="cover-item"><img src="Sanchetna-11.jpg" alt="अंक 11"><p>अंक 11</p></div>
+                        <div class="cover-item"><img src="Sanchetna-12.jpg" alt="अंक 12"><p>अंक 12</p></div>
+                        <div class="cover-item"><img src="Sanchetna-13.jpg" alt="अंक 13"><p>अंक 13</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="itihas" class="section">
+            <div class="itihas-highlight">
+                <h2>हिन्दी साहित्य का इतिहास - राष्ट्रीय आभासी संगोष्ठी</h2>
+                <p style="text-align:center; margin-top:1rem;">मार्च 2025 से निरंतर संचालित। जुलाई 2026 तक <b>18 सफल संगोष्ठियाँ</b> पूर्ण। यह मंच हिन्दी साहित्य के कालक्रम, प्रवृत्तियों और प्रमुख रचनाकारों को समझने का एक व्यवस्थित प्रयास है।</p>
+                <div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(event, 'itihas-current')">वर्तमान संगोष्ठी</button>
+    <button class="tab-btn" onclick="openTab(event, 'itihas-archive')">विगत संगोष्ठियाँ</button>
+    <button class="tab-btn" onclick="openTab(event, 'itihas-media')">मीडिया कवरेज</button> 
+</div>
+                <div id="itihas-current" class="tab-content active" style="scroll-margin-top: 100px;">
+                    <div class="current-poster">
+                        <img src="itihas-18.jpg" alt="हिन्दी साहित्य का इतिहास संगोष्ठी अंक 18">
+                        <div class="poster-details">
+                            <h3>संगोष्ठी - 18 | जुलाई 2026</h3>
+                            <p><b>विषय:</b> द्विवेदी युग के प्रमुख कवि</p>
+                            <p><b>दिनांक:</b> शनिवार, 18 जुलाई 2026 | <b>समय:</b> सायं 8:15 बजे से</p>
+                            <p><b>मुख्य वक्ता:</b> डॉ अर्जुन गुप्ता 'गुंजन'</p>
+                            <p><b>माध्यम:</b> Google Meet | <b>निःशुल्क प्रवेश</b></p>
+                            <a href="https://forms.gle/xxxxxxx" class="btn" target="_blank">पंजीकरण करें</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="itihas-archive" class="tab-content" style="scroll-margin-top: 100px;">
+                    <h3 style="color: #FFD700; margin-bottom: 1rem;">पिछली 17 संगोष्ठियों के पोस्टर</h3>
+                    <div class="archive-gallery">
+                        <div class="archive-item"><img src="itihas-01.jpg" alt="संगोष्ठी 1"><p>संगोष्ठी 01</p></div>
+                        <div class="archive-item"><img src="itihas-02.jpg" alt="संगोष्ठी 2"><p>संगोष्ठी 02</p></div>
+                        <div class="archive-item"><img src="itihas-03.jpg" alt="संगोष्ठी 3"><p>संगोष्ठी 03</p></div>
+                        <div class="archive-item"><img src="itihas-04.jpg" alt="संगोष्ठी 4"><p>संगोष्ठी 04</p></div>
+                        <div class="archive-item"><img src="itihas-05.jpg" alt="संगोष्ठी 5"><p>संगोष्ठी 05</p></div>
+                        <div class="archive-item"><img src="itihas-06.jpg" alt="संगोष्ठी 6"><p>संगोष्ठी 06</p></div>
+                        <div class="archive-item"><img src="itihas-07.jpg" alt="संगोष्ठी 7"><p>संगोष्ठी 07</p></div>
+                        <div class="archive-item"><img src="itihas-08.jpg" alt="संगोष्ठी 8"><p>संगोष्ठी 08</p></div>
+                        <div class="archive-item"><img src="itihas-09.jpg" alt="संगोष्ठी 9"><p>संगोष्ठी 09</p></div>
+                        <div class="archive-item"><img src="itihas-10.jpg" alt="संगोष्ठी 10"><p>संगोष्ठी 10</p></div>
+                        <div class="archive-item"><img src="itihas-11.jpg" alt="संगोष्ठी 11"><p>संगोष्ठी 11</p></div>
+                        <div class="archive-item"><img src="itihas-12.jpg" alt="संगोष्ठी 12"><p>संगोष्ठी 12</p></div>
+                        <div class="archive-item"><img src="itihas-13.jpg" alt="संगोष्ठी 13"><p>संगोष्ठी 13</p></div>
+                        <div class="archive-item"><img src="itihas-14.jpg" alt="संगोष्ठी 14"><p>संगोष्ठी 14</p></div>
+                        <div class="archive-item"><img src="itihas-15.jpg" alt="संगोष्ठी 15"><p>संगोष्ठी 15</p></div>
+                        <div class="archive-item"><img src="itihas-16.jpg" alt="संगोष्ठी 16"><p>संगोष्ठी 16</p></div>
+                        <div class="archive-item"><img src="itihas-17.jpg" alt="संगोष्ठी 17"><p>संगोष्ठी 17</p></div>
+                    </div>
+                </div>
+                <div id="itihas-media" class="tab-content" style="scroll-margin-top: 100px;">
+                    <h3 style="color: #FFD700; margin-bottom: 1rem;">समाचार पत्रों में प्रकाशन</h3>
+                    <div class="archive-gallery">
+                        <div class="archive-item"><img src="Media-01.jpeg" alt="मीडिया कवरेज 1"></div>
+                        <div class="archive-item"><img src="Media-02.jpeg" alt="मीडिया कवरेज 2"></div>
+                        <div class="archive-item"><img src="Media-03.jpeg" alt="मीडिया कवरेज 3"></div>
+                        <div class="archive-item"><img src="Media-04.jpeg" alt="मीडिया कवरेज 4"></div>
+                        <div class="archive-item"><img src="Media-05.jpeg" alt="मीडिया कवरेज 5"></div>
+                        <div class="archive-item"><img src="Media-06.jpeg" alt="मीडिया कवरेज 6"></div>
+                        <div class="archive-item"><img src="Media-07.jpeg" alt="मीडिया कवरेज 7"></div>
+                        <div class="archive-item"><img src="Media-08.jpeg" alt="मीडिया कवरेज 8"></div>
+                        <div class="archive-item"><img src="Media-09.jpeg" alt="मीडिया कवरेज 9"></div>
+                        <div class="archive-item"><img src="Media-10.jpeg" alt="मीडिया कवरेज 10"></div>
+                        <div class="archive-item"><img src="Media-11.jpeg" alt="मीडिया कवरेज 11"></div>
+                        <div class="archive-item"><img src="Media-12.jpeg" alt="मीडिया कवरेज 12"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="karyakram" class="section">
+            <h2>कार्यक्रम</h2>
+            <div class="activity-list">
+                <p style="text-align:center; margin-bottom:1rem;"><b>वागीश्वरी काव्य निर्झरिणी, प्रयागराज, उ. प्र.</b></p>
+                <h3>< प्रमुख कार्यकलाप ></h3>
+                <ul>
+                    <li>विगत <b>5 जनवरी 2023</b> से संचालित।</li>
+                    <li>हिन्दी साहित्य तथा हिन्दी भाषा के उन्नयन तथा संवर्धन के क्षेत्र में अभिनव सेवा-भावना का उद्देश्य है।</li>
+                    <li>इस मंच से संचालित <b>"छंदों की पाठशाला/ कार्यशाला"</b> में प्रतिदिन वैदिक छंद सिखाया जाता है। साहित्य साधकों की रचनाओं की सम्यक समीक्षा करके तथा मार्गदर्शन दे कर छंद सीखाने का कार्य सम्पन्न किया जाता है तथा प्रतिदिन 3 सर्वश्रेष्ठ रचनाकारों को सम्मान-पत्र से सम्मानित किया जाता है।</li>
+                    <li>अब तक कुल <b>95 (पंचानवे) छंद</b> सिखाया गया है तथा यह कार्य निरंतर जारी है।</li>
+                    <li>छंदों के अतिरिक्त सप्ताह में एक दिन वृहस्पतिवार को गद्य विधा के अंतर्गत लघुकथा, व्यंग्य, भाव-पल्लवन, संस्मरण, यात्रा-संस्मरण, पत्र-लेखन, निबंध, आलेख, पुस्तक-समीक्षा तथा फिल्म-समीक्षा भी सिखाया जाता है।</li>
+                    <li>प्राचीन विधा कहमुकरी तथा नवीन विधा छंदमुक्त में भी सर्जन करना सिखाया जाता है।</li>
+                    <li>मुक्तक तथा गीत विधा में भी सर्जन करना सिखाया जाता है।</li>
+                    <li><b>संचेतना के स्वर</b> (त्रैमासिक साहित्यिक ई-पत्रिका) का संपादन तथा प्रकाशन भी विगत मई 2023 से किया जा रहा है।</li>
+                    <li>मार्च 2025 से <b>हिन्दी साहित्य का इतिहास</b> विषयक राष्ट्रीय आभासी संगोष्ठियाँ निरंतर संचालित की जा रही हैं। जुलाई 2026 तक कुल 18 संगोष्ठियाँ संचालित की जा चुकी हैं तथा यह कार्यक्रम भी निरंतर जारी है।</li>
+                    <li><b>वागीश्वरी काव्य निर्झरिणी</b> का <b>वेबसाइट पोर्टल</b> भी उपलब्ध करवाया गया है। इस वेबसाइट के माध्यम से सभी संचालित साहित्यिक गतिविधियों को प्रदर्शित किया जा रहा है तथा पुस्तकों की समीक्षाएँ, संचेतना के स्वर, प्रचार-प्रसार, विमोचन तथा प्रदर्शनी इत्यादि उपलब्ध करवाये जाने की योजना है।</li>
+                    <li>आगामी वर्षों में अन्य साहित्यिक गतिविधियाँ भी संचालित की जायेंगी, यथा <b>हिन्दी भाषा का उद्भव और विकास, देवनागरी लिपि का उद्भव और विकास, छंदों का इतिहास, नवगीत लेखन, अलंकार, रस, शब्दों के भेद, मंचीय कवि-सम्मेलन तथा अन्यान्य साहित्यिक कार्यक्रम</b>।</li>
+                </ul>
+                <p style="margin-top:1.5rem; text-align:justify;"><b>छंदों की पाठशाला/ कार्यशाला में अब तक सिखाए गए 95 छंद:</b> छंद की परिभाषा, छंदों के भेद, मात्रा गणना, मनहरण घनाक्षरी, सूर घनाक्षरी, डमरू घनाक्षरी, कलाधर घनाक्षरी, रूप घनाक्षरी, जनहरण घनाक्षरी, चौपाई छंद, दोहा छंद, सोरठा छंद, रोला छंद, कुण्डलिया छंद, तमाल छंद, शक्ति छंद, आनंद छंद, आनंदवर्धक छंद, दिग्पाल/ मृदुगति छंद, शैल छंद, मल्लिका/ समानी छंद, हरिगीतिका छंद, संयुक्त छंद, रूपमाला/ मदन छंद, माधव मालती छंद, प्रदीप छंद, सरसी/ कबीर छंद, मनोरम छंद, विष्णुपद छंद, लावणी छंद, कुकुभ छंद, ताटंक छंद, दुर्मिल सवैया छंद, मत्तगयंद सवैया छंद, मदिरा सवैया छंद, चकोर सवैया छंद, गंगोदक सवैया छंद, धारी छंद, पादाकुलक छंद, अरिल्ल छंद, डिल्ला छंद, सिंह छंद, पञ्झटिका छंद, निश्छल छंद, सार/ ललित पद छंद, शृंगार छंद, महाशृंगार छंद, गीतिका छंद, हीर छंद, अवतार छंद, कुंडल छंद, शुभांगी/ शोकहर छंद, त्रिभंगी छंद, विधाता छंद, कलाधर छंद, चामर छंद, पंचचामर छंद, तंत्री छंद, वाम सवैया छंद, किरीट सवैया छंद, मंदारमाला सवैया छंद, वागीश्वरी सवैया छंद, भालचन्द्र छंद, अनुकूला छंद, महाशिव छंद, राधेश्यामी छंद, केहरी छंद, मधुरागिनी छंद, गीत विधा, गोपी छंद, उज्ज्वला छंद, राधिका छंद, कनक मंजरी छंद, सरस्वती छंद, आल्हा छंद, मोटनक छंद, श्येनिका छंद, नील छंद, तीव्र छंद, आभार सवैया छंद, नीलाम्बुज छंद, भवानी छंद, आरती छंद, सूर्यकांत छंद, उपेंद्रवज्रा छंद, बरवै छंद, प्रमाणिका छंद, रुचिरा छंद, गगनांगना छंद, उड़ियाना छंद, चुलियाला छंद, भुजंगप्रयात छंद, सुमति छंद, प्लवंगम छंद, अहीर छंद, माहिया छंद, हंसगति छंद तथा साधना छंद।</p>
+                <ul style="margin-top:1rem;">
+                    <li>फेसबुक पटल पर एकल काव्य-पाठ के अंतर्गत अब तक कुल <b>24 कवियों तथा कवयित्रियों</b> नें <b>एकल काव्य-पाठ</b> में प्रतिभाग किया है।</li>
+                    <li>साहित्य-साधना की दिशा में सभी जागरुक साहित्य-साधकों को यह मंच सीखने का सुनहरा अवसर प्रदान करता है तथा उन्हें प्रेरित करता है।</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="rachna" class="section">
+            <h2>चयनित रचनाएँ</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>संगम का स्वर</h3>
+                    <p><em>रचयिता: डॉ. अनामिका त्रिपाठी</em></p>
+                    <p>गंगा-यमुना के तट पर, सरस्वती की गूंज है...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+    <h2>गैलरी</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="gallery-000.jpeg" alt="गैलरी फोटो 1"></div>
+        <div class="gallery-item"><img src="gallery-001.jpeg" alt="गैलरी फोटो 2"></div>
+        <div class="gallery-item"><img src="gallery-002.jpeg" alt="गैलरी फोटो 3"></div>
+        <div class="gallery-item"><img src="gallery-003.jpeg" alt="गैलरी फोटो 4"></div>
+        <div class="gallery-item"><img src="gallery-004.jpeg" alt="गैलरी फोटो 5"></div>
+        <div class="gallery-item"><img src="gallery-005.jpeg" alt="गैलरी फोटो 6"></div>
+        <div class="gallery-item"><img src="gallery-006.jpeg" alt="गैलरी फोटो 7"></div>
+        <div class="gallery-item"><img src="gallery-007.jpeg" alt="गैलरी फोटो 8"></div>
+        <div class="gallery-item"><img src="gallery-008.jpeg" alt="गैलरी फोटो 9"></div>
+        <div class="gallery-item"><img src="gallery-009.jpeg" alt="गैलरी फोटो 10"></div>
+        <div class="gallery-item"><img src="gallery-010.jpeg" alt="गैलरी फोटो 11"></div>
+        <div class="gallery-item"><img src="gallery-011.jpeg" alt="गैलरी फोटो 12"></div>
+        <div class="gallery-item"><img src="gallery-012.jpeg" alt="गैलरी फोटो 13"></div>
+        <div class="gallery-item"><img src="gallery-013.jpeg" alt="गैलरी फोटो 14"></div>
+        <div class="gallery-item"><img src="gallery-014.jpeg" alt="गैलरी फोटो 15"></div>
+        <div class="gallery-item"><img src="gallery-015.jpeg" alt="गैलरी फोटो 16"></div>
+        <div class="gallery-item"><img src="gallery-016.jpeg" alt="गैलरी फोटो 17"></div>
+        <div class="gallery-item"><img src="gallery-017.jpeg" alt="गैलरी फोटो 18"></div>
+        <div class="gallery-item"><img src="gallery-018.jpeg" alt="गैलरी फोटो 19"></div>
+        <div class="gallery-item"><img src="gallery-019.jpeg" alt="गैलरी फोटो 20"></div>
+        <div class="gallery-item"><img src="gallery-020.jpeg" alt="गैलरी फोटो 21"></div>
+        <div class="gallery-item"><img src="gallery-021.jpeg" alt="गैलरी फोटो 22"></div>
+        <div class="gallery-item"><img src="gallery-022.jpeg" alt="गैलरी फोटो 23"></div>
+        <div class="gallery-item"><img src="gallery-023.jpeg" alt="गैलरी फोटो 24"></div>
+        <div class="gallery-item"><img src="gallery-024.jpeg" alt="गैलरी फोटो 25"></div>
+        <div class="gallery-item"><img src="gallery-025.jpeg" alt="गैलरी फोटो 26"></div>
+        <div class="gallery-item"><img src="gallery-026.jpeg" alt="गैलरी फोटो 27"></div>
+        <div class="gallery-item"><img src="gallery-027.jpeg" alt="गैलरी फोटो 28"></div>
+        <div class="gallery-item"><img src="gallery-028.jpeg" alt="गैलरी फोटो 29"></div>
+        <div class="gallery-item"><img src="gallery-029.jpeg" alt="गैलरी फोटो 30"></div>
+        <div class="gallery-item"><img src="gallery-030.jpeg" alt="गैलरी फोटो 31"></div>
+        <div class="gallery-item"><img src="gallery-031.jpeg" alt="गैलरी फोटो 32"></div>
+        <div class="gallery-item"><img src="gallery-032.jpeg" alt="गैलरी फोटो 33"></div>
+        <div class="gallery-item"><img src="gallery-033.jpeg" alt="गैलरी फोटो 34"></div>
+        <div class="gallery-item"><img src="gallery-034.jpeg" alt="गैलरी फोटो 35"></div>
+        <div class="gallery-item"><img src="gallery-035.jpeg" alt="गैलरी फोटो 36"></div>
+        <div class="gallery-item"><img src="gallery-036.jpeg" alt="गैलरी फोटो 37"></div>
+        <div class="gallery-item"><img src="gallery-037.jpeg" alt="गैलरी फोटो 38"></div>
+        <div class="gallery-item"><img src="gallery-038.jpeg" alt="गैलरी फोटो 39"></div>
+        <div class="gallery-item"><img src="gallery-039.jpeg" alt="गैलरी फोटो 40"></div>
+        <div class="gallery-item"><img src="gallery-040.jpeg" alt="गैलरी फोटो 41"></div>
+    </div>
+</section>
+
+        <!-- 4. नया Section: संचालक-मंडल ADDED -->
+        <section id="sanchalak" class="section">
+    <h2>संचालक-मंडल</h2>
+    <div class="team-grid">
+        <div class="team-card"><img src="photo-1.jpeg" alt="डॉ अर्जुन गुप्ता 'गुंजन'"><h3>डॉ अर्जुन गुप्ता 'गुंजन'</h3><p>संस्थापक एवं अध्यक्ष</p></div>
+        <div class="team-card"><img src="photo-2.jpeg" alt="विनीता निर्झर"><h3>विनीता निर्झर</h3><p>वरिष्ठ संरक्षक</p></div>
+        <div class="team-card"><img src="photo-3.jpeg" alt="हरीश भदौरिया"><h3>हरीश भदौरिया</h3><p>महासचिव</p></div>
+        <div class="team-card"><img src="photo-4.jpeg" alt="दुर्गादत्त मिश्र 'बाबा'"><h3>दुर्गादत्त मिश्र 'बाबा'</h3><p>व्यवस्थापक</p></div>
+        <div class="team-card"><img src="photo-5.jpeg" alt="क्षमा पाण्डेय"><h3>क्षमा पाण्डेय</h3><p>सलाहकार</p></div>
+    </div>
+            <p style="text-align:center; margin-top:1.5rem; color:#666;"><i>संचालक-मंडल का पूरा विवरण यहाँ अपडेट करें।</i></p>
+        </section>
+
+        <section id="sampark" class="section">
+            <h2>संपर्क करें / सदस्य बनें</h2>
+            <form>
+                <input type="text" placeholder="आपका पूरा नाम" required>
+                <input type="email" placeholder="ईमेल आईडी" required>
+                <input type="tel" placeholder="मोबाइल नंबर" required>
+                <textarea rows="4" placeholder="आपका संदेश या रचना यहाँ लिखें..."></textarea>
+                <button type="submit">संदेश भेजें</button>
+            </form>
+            <p style="text-align:center; margin-top:1.5rem;">
+                <strong>पता:</strong> एच-1, विनायक सुख विला, लूकरगंज, प्रयागराज- 211001<br>
+                <strong>ईमेल:</strong> satyamun2021@gmail.com | <strong>फ़ोन:</strong> +91-9452252582
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 वागीश्वरी काव्य निर्झरिणी | रजिस्ट्रेशन संख्या UDYAM-UP-03-0039662 | सभी अधिकार सुरक्षित</p>
+    </footer>
+
+<script>
+function openTab(evt, tabName) {
+  document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+
+// Navbar Sub-Menu को Fix
+document.querySelectorAll('a[href="#itihas-current"], a[href="#itihas-archive"], a[href="#itihas-media"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        const targetTab = this.getAttribute('href').replace('#itihas-', '');
+        document.querySelector('.tab-btn[onclick*="' + targetTab + '"]').click();
+        setTimeout(() => {
+            document.getElementById('itihas-' + targetTab).scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+    });
+});
+</script>
+
+</body>
+</html>
