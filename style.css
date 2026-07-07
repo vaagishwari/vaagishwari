@@ -1,38 +1,55 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 body { font-family: 'Noto Sans Devanagari', sans-serif; }
 
-.header {
+/* === Header एक लाइन में === */
+.header-container {
   display: flex;
-  flex-direction: row; 
-  justify-content: center; /* दायें-बायें */
   align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  background: url('header-bg.jpg') no-repeat center/cover; /* आपने header-bg.jpg भी रखा है */
-  flex-wrap: nowrap; /* बहुत छोटी Screen पर नीचे आ जाए */
-}
-@media (max-width: 480px) {
-.logo { 
-  width: 45px; 
-  height: 45px; 
-  border-radius: 50%; 
-  flex-shrink: 0;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  flex-wrap: nowrap; /* नीचे नहीं जाएगा */
+  background: url('header-bg.jpg') no-repeat center/cover;
 }
 
-.header h1 { 
-  flex: 1; 
-  text-align: center; 
-  color: white; 
-  font-size: clamp(18px, 4vw, 28px); /* Mobile में छोटा हो जाएगा */
+.logo-left, .logo-right {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0; /* लोगो सिकुड़ेगा नहीं */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header h1 {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: clamp(16px, 4vw, 24px); /* मोबाइल में अपने आप छोटा */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-shadow: 2px 2px 4px #000;
 }
 
 .tagline {
   text-align: center;
   background: #222;
-  color: #f0c040;
+  color: #f8c840;
   padding: 8px;
   margin: 10px auto;
   border-radius: 20px;
   max-width: 90%;
+}
+
+/* === मोबाइल के लिए === */
+@media (max-width: 480px) {
+  .logo-left, .logo-right {
+    width: 38px; /* और छोटा */
+    height: 38px;
+  }
+  .header-container {
+    gap: 6px;
+    padding: 8px;
+  }
 }
