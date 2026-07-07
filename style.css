@@ -1,55 +1,29 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body { font-family: 'Noto Sans Devanagari', sans-serif; }
+body { margin: 0; }
 
-/* === Header एक लाइन में === */
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 10px;
-  flex-wrap: nowrap; /* नीचे नहीं जाएगा */
-  background: url('header-bg.jpg') no-repeat center/cover;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  gap: 5px !important;
+  padding: 8px 5px !important;
 }
 
 .logo-left, .logo-right {
-  width: 50px;
-  height: 50px;
-  flex-shrink: 0; /* लोगो सिकुड़ेगा नहीं */
+  width: 35px !important;
+  height: 35px !important;
+  flex-shrink: 0 !important;
   border-radius: 50%;
-  object-fit: cover;
 }
 
-.header h1 {
-  flex: 1;
-  text-align: center;
-  color: white;
-  font-size: clamp(16px, 4vw, 24px); /* मोबाइल में अपने आप छोटा */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.tagline {
-  text-align: center;
-  background: #222;
-  color: #f8c840;
-  padding: 8px;
-  margin: 10px auto;
-  border-radius: 20px;
-  max-width: 90%;
-}
-
-/* === मोबाइल के लिए === */
-@media (max-width: 480px) {
-  .logo-left, .logo-right {
-    width: 38px; /* और छोटा */
-    height: 38px;
-  }
-  .header-container {
-    gap: 6px;
-    padding: 8px;
-  }
+.header-container h1 {
+  font-size: 15px !important;
+  text-align: center !important;
+  flex: 1 !important;
+  white-space: nowrap !important;
+  margin: 0 3px !important;
 }
