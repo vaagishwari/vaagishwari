@@ -81,10 +81,10 @@
       .team-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid #5D4037; }
       .team-card h3 { color: #5D4037; margin-bottom: 0.3rem; }
       .team-card p { font-size: 0.95rem; color: #666; }
-        @media (max-width: 768px) {
-         .header-container { flex-direction: row; justify-con tent: center; gap: 0.5rem; flex-wrap: wrap; }
-         .logo-left,.logo-right { height: 60px; width: 60px; }
-         .header-text h1 { font-size: 1.8rem; }
+      @media (max-width: 768px) {
+.header-container { flex-direction: row !important; justify-content: space-between !important; gap: 5px !important; flex-wrap: nowrap !important; padding: 8px 5px !important; }
+.logo-left,.logo-right { height: 35px !important; width: 35px !important; flex-shrink: 0 !important; }
+.header-container h1 { font-size: clamp(14px, 4vw, 16px) !important; white-space: nowrap !important; margin: 0 3px !important; }
          .header-text p { font-size: 1.1rem; padding: 0.4rem 1rem; }
             nav { flex-direction: column; }
             nav a, nav .dropbtn { display: block; margin: 0.2rem 0; }
