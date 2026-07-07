@@ -81,20 +81,50 @@
       .team-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid #5D4037; }
       .team-card h3 { color: #5D4037; margin-bottom: 0.3rem; }
       .team-card p { font-size: 0.95rem; color: #666; }
-      @media (max-width: 768px) {
-.header-container { flex-direction: row !important; justify-content: space-between !important; gap: 5px !important; flex-wrap: nowrap !important; padding: 8px 5px !important; }
-.logo-left,.logo-right { height: 35px !important; width: 35px !important; flex-shrink: 0 !important; }
-.header-container h1 { font-size: clamp(14px, 4vw, 16px) !important; white-space: nowrap !important; margin: 0 3px !important; }
-         .header-text p { font-size: 1.1rem; padding: 0.4rem 1rem; }
-            nav { flex-direction: column; }
-            nav a, nav .dropbtn { display: block; margin: 0.2rem 0; }
-         .dropdown-content { position: static; width: 100%; margin-top: 0.5rem; }
-         .cover-gallery { grid-template-columns: repeat(2, 1fr); }
-         .current-poster { flex-direction: column; text-align: center; }
-         .tab-menu { gap: 0.5rem; }
-         .tab-btn { padding: 0.6rem 1rem; font-size: 0.9rem; }
-         .poster-details { min-width: 100%; }
-        }
+  @media (max-width: 768px) {
+.header-container { 
+  display: flex !important; 
+  flex-direction: row !important; 
+  justify-content: space-between !important; 
+  align-items: center !important;
+  gap: 8px !important; 
+  flex-wrap: nowrap !important; 
+  padding: 10px 8px !important; 
+}
+.logo-left,.logo-right { 
+  height: 40px !important; 
+  width: 40px !important; 
+  flex-shrink: 0 !important; 
+}
+.header-container h1 { 
+  font-size: clamp(16px, 5vw, 20px) !important; 
+  font-weight: 800 !important;
+  text-align: center !important;
+  flex: 1 !important; 
+  white-space: nowrap !important; 
+  margin: 0 5px !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.header-container p { 
+  display: none !important; 
+}
+.header-text {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 90% !important;
+  text-align: center !important;
+  z-index: 2 !important;
+}
+.header-text p {
+  display: block !important;
+  font-size: clamp(14px, 4.5vw, 18px) !important;
+  font-weight: 700 !important;
+  color: #FFD700 !important;
+  white-space: nowrap !important;
+}
+}
     </style>
 </head>
 <body>
